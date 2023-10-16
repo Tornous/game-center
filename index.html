@@ -18,43 +18,47 @@
       let c = ca[i];
       while (c.charAt(0) == ' ') {
        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-
-  function checkCookie() {
-    let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-      user = prompt("Please enter your new username! you:","");
-      if (user != "" && user != null) {
-         setCookie("username", user, 30);
        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
     }
-  }
-  </script>
-  <script>
-  function return() {
-    location.replace("https://tornous.github.io/shell")
-  }
-  function roblox() {
-    location.replace("https://roblox.com")
-  }
-  function gamec() {
-    location.replace("https://tornous.wixsite.com/social-club/")
-  }
-</script>
-</head>
 
-<body onload="checkCookie()"></body>
-<body>
-  <button onclick="return()">Go back to "Shell"</button>
-  <h1>Game Center</h1>
-  <button onclick="roblox()">Roblox</button> <button onclick="gamec()">Social Club</button>
-</body>
+    function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+       user = prompt("Please enter your new username! you:","");
+       if (user != "" && user != null) {
+          setCookie("username", user, 30);
+        }
+      }
+     }
+   </script>
+    <script>
+     function Return() {
+       location.replace("https://tornous.github.io/shell")
+      }
+    </script>
+    <script>
+      function roblox() {
+        location.replace("https://roblox.com")
+      }
+    </script>
+    <script>
+     function gamec() {
+       location.replace("https://tornous.wixsite.com/social-club/")
+      }
+    </script>
+  </head>
+
+  <body onload="checkCookie()"></body>
+  <body>
+    <button onclick="Return()">Go back to "Shell"</button>
+    <h1>Game Center</h1>
+    <button onclick="roblox()">Roblox</button> <button onclick="gamec()">Social Club</button>
+  </body>
 </html>
